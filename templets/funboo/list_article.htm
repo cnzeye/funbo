@@ -1,0 +1,101 @@
+<!-- 栏目列表页 -->
+<!-- 导入头部 -->
+{dede:include filename="head.htm"/}
+
+
+
+<!-- 电脑看的 -->
+<section class="hidden-xs hidden-sm text-center container" style="background-color: #5cb85c; height: 450px;background:url({dede:global.cfg_templets_skin/}/images/bj.jpg)no-repeat center / cover;padding-top:150px; color:white;">
+ <div style="text-align:left;max-width:1200px;margin:auto;padding-left: 15px;">  
+  <strong style="font-size:40px;color:#5cb85c">“10年互联网+服务经验”</strong>
+
+  <h2 style="margin-top: -1px;">助力中小型企业公司品牌高速发展</h2>
+  <small> enterprise brand development at a high speed</small>
+ {dede:mytag typeid='0' name='case'/} 
+</div>
+
+</section>
+<!-- 电脑看的end -->
+<!-- 手机看的-->    
+<section class="container hidden-lg hidden-md" style="background-color: black;color:#525252;max-height: 500px;padding: 15px;">
+
+  <h2><strong style="color: #56ba5a;">案例展示/WORK</strong></h2>
+  <small><h2>10年服务经验/让产品落地生根</h2></small>
+  <p>10 years experience in the service/product take root</p>
+
+</section>
+<!-- 手机看的end-->  
+<!-- 分类和作品展示区域 -->
+
+
+<!-- 子栏目输出电脑 -->
+<article>
+<ul class="nav nav-tabs hidden-xs hidden-sm" style="margin:auto;margin-bottom: 50px;max-width:1200px;margin-top: 50px;border:0;">
+
+ <li{dede:field name=typeid runphp="yes"}(@me=="2")? @me=" class='active'":@me="";{/dede:field}><a href="/plus/list.php?tid=2">全部作品</a></li>
+ {dede:channel type='son'  currentstyle="
+ <li class='active'><a href='~typelink~' >~typename~</a></li>"}
+ <li role="presentation"><a href="[field:typeurl/]">[field:typename/]</a></li>
+ {/dede:channel}
+
+</ul>
+</article>
+<!-- 子栏目输出电脑END -->
+
+
+
+<!-- 手机显示电脑隐藏 -->
+<article>
+<ul class="nav nav-tabs hidden-lg hidden-md" style="margin:auto;border:0;padding-left: 15px;padding-right: 15px;">
+ {dede:channel type='son'   currentstyle="
+ <li class='active'><a href='~typelink~' >~typename~</a></li>"}
+ <li role="presentation"><a href="[field:typeurl/]">[field:typename function=' ( strlen("@me")>3 ? cn_substr("@me",3)."" : "@me" ) ' /]</a></li>
+ {/dede:channel}
+
+</ul>
+</article>
+
+
+
+
+
+<!-- 循环体 -->
+{dede:list pagesize='8'}
+<div class="col-md-3 col-xs-6 col-sm-6 clo-lg-3">
+  <div class="indeximg">
+    [field:array runphp='yes']@me = (empty(@me['litpic']) ? "" : "<a href='{@me['arcurl']}' class='preview'>
+      <figure><img src='{@me['litpic']}'/></figure></a>"); [/field:array]
+    <div class="captionc">
+      <h3 style="color:#c0c0c0;"><a href="[field:arcurl/]" class="title">[field:title function=' ( strlen("@me")>15 ? cn_substr("@me",15)."..." : "@me" ) ' /]</a></h3>
+      <small style="color: #c0c0c0"><img src="/templets/funboo/images/type.png" style="width:11px;">[field:typelink/]<img src="/templets/funboo/images/view.png" style="width:16px;">[field:click/]hits</small>
+
+    </div>
+  </div>
+</div>
+{/dede:list}
+
+<!-- 循环体 --> 
+
+
+
+
+
+<!-- 分类和作品展示区域结束 -->
+<!-- 分页 -->
+<section>
+<div class="container" style="background-color: #f4f4f4;">
+  <div class="row" style="max-width:1200px;margin:auto;text-align: center;">
+    <div class="Page navigationc">
+      <ul class="paginationc">
+        {dede:pagelist listitem="info,index,end,pre,next,pageno"  listsize="10"/}
+      </ul>
+    </div>
+
+  </div>
+</div>
+</section>
+<!-- 分页 -->
+
+
+{dede:include filename="footer.htm"/}
+

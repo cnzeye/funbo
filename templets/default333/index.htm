@@ -1,0 +1,49 @@
+{dede:include filename="head.htm"/}
+
+
+
+<!-- 横向轮播 -->
+
+<section class="swiper-container hidden-sm hidden-xs">
+<div id="sh" class="alert alert-danger" role="alert">左右滑动!</div>
+	<div class="swiper-wrapper">
+
+		{dede:channelArtlist typeid='20'}
+		<div class="swiper-slide">
+			<div class="swiper-slide-box">
+			{dede:type}
+			<h1>[field:typename/]</h1>
+			<h5>[field:description/]</h5>
+			{/dede:type}
+			<!-- 子栏目 -->
+			<ul class="list-group">
+				{dede:channel type='son'}
+				<li class="list-group-item"><a href='[field:typelink /]'>[field:typename/]</a></li>
+				{/dede:channel}
+			</ul>
+			</div>
+		</div>
+		{/dede:channelArtlist}
+
+
+	</div>
+
+	<!-- Add Pagination -->
+	<div class="swiper-pagination"></div>
+</section>
+
+
+{dede:arclist typeid='2' titlelen='24' imgheight='90' imgwidth='112' limit="0,4"}
+
+<div class="jkbk_pic"><a href='[field:arcurl/]'>[field:image/]</a>
+
+         <p><a href="[field:arcurl/]">[field:title/]</a></p>
+
+</div>
+
+{/dede:arclist}
+
+{dede:include filename="footer.htm"/}
+</body>
+</html>
+

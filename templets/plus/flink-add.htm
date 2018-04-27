@@ -1,0 +1,75 @@
+<?php
+   pasterTempletDiy("funboo/head.htm"); 
+?>
+
+<ul style="margin-top: 100px;">
+	<div>
+		<h2>申请链接</h2>
+		<span>
+			<a href="<?php echo "$cfg_phpurl/flink.php"; ?>">查看链接</a>
+		</span>
+	</div>
+	<div class='hhhh'>
+		  <form name="form1" method="post" action="flink.php">
+		  	<input type='hidden' name='dopost' value='save'>
+		      <table width="100%"  border="0" cellspacing="1" cellpadding="3">
+
+
+                <tr> 
+                  <td height="25">网址：</td>
+                  <td><input name="url" type="text" id="url" value="http://" size="30" class="ipt-txt"></td>
+                </tr>
+                <tr> 
+                  <td height="25">网站名称：</td>
+                  <td><input name="webname" type="text" id="webname" size="30" class="ipt-txt"></td>
+                </tr>
+              
+                <tr> 
+                  <td height="25">网站简况：</td>
+                  <td> <textarea name="msg" cols="40" rows="4" id="msg" class="ipt-txt"></textarea></td>
+                </tr>
+                <tr> 
+                  <td height="25">站长Email：</td>
+                  <td><input name="email" type="text" id="email" size="30" class="ipt-txt"></td>
+                </tr>
+                <tr> 
+                  <td height="25">网站类型：</td>
+                  <td> <select name="typeid" id="typeid" >
+                      <?php
+        
+        $dsql->SetQuery("select * from #@__flinktype");
+        $dsql->Execute();
+        while($row=$dsql->GetObject())
+        {
+        	echo "	<option value='".$row->id."'>".$row->typename."</option>\r\n";
+        }
+        ?>
+                    </select> </td>
+                </tr>
+                <tr>
+                  <td height="25">验证码：</td>
+                  <td><table width="200" border="0" cellspacing="0" cellpadding="0">
+                      <tr> 
+                        <td width="84"><input name="validate" type="text" id="vdcode2" size="10" class="ipt-txt" style="text-transform: uppercase;"></td>
+                        <td width="116"><img src='../include/vdimgck.php' style="cursor:pointer" onclick="this.src=this.src+'?'" title="点击我更换图片" alt="点击我更换图片" /></td>
+                      </tr>
+                    </table></td>
+                </tr>
+                <tr> 
+                  <td height="51">&nbsp;</td>
+                  <td><input type="submit" name="Submit" value=" 提 交 " class="btn-2">
+                    　 　 
+                    <input type="reset" name="Submit" value=" 重 置 " class="btn-2"></td>
+                </tr>
+              </table>
+		  </form>
+
+	
+	</div>
+
+</ul>
+
+<!-- //底部模板 -->
+<?php
+   pasterTempletDiy("funboo/footer.htm"); 
+?>

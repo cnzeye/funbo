@@ -1,0 +1,1 @@
+<div class="swiper-slide" style="background:url([field:picname /])"><h1><a href="[field:arcurl /]">[field:title /]</a></h1></div>

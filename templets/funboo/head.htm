@@ -1,0 +1,51 @@
+   	<!DOCTYPE html>
+   	<html lang="zh-CN">
+   	<head>
+   		<meta charset="utf-8">
+   		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+   		<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+   		
+   		<title>{dede:global.cfg_webname/}</title>
+   		<meta name="description" content="{dede:global.cfg_description/}" />
+   		<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+   		<!-- 方博互动BT响应式框架搭建 -->   	  	  	
+   		<link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/style/bootstrap.min.css" type="text/css">
+   		<link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/style/style.css">
+   		<!-- Plugin CSS -->
+   		<link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/style/animate.min.css" type="text/css">
+   		<link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/style/creative.css" type="text/css">
+   		<link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/style/normalize.css" type="text/css">
+   		<!-- 轮播效果引入 -->
+   		<link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/style/swiper.min.css" type="text/css">
+	<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+</head>
+
+<body id="page-top">
+	<header>
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<!-- 我们使用流体选项来避免覆盖正常的容器内的固定宽度狭窄的内容列-->
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-6" aria-expanded="false">
+					
+					<img src='{dede:global.cfg_templets_skin/}/images/icon888.jpg'>
+				</button>
+				<a class="navbar-brand" href="https://www.loopei.cn"><img src='{dede:global.cfg_templets_skin/}/images/logo2.svg' alt="绵阳网站建设" style='position:relative;width:150px;'/></a>
+			</div>
+
+			<div class="navbar-collapse class	collapse" id="bs-example-navbar-collapse-6" aria-expanded="false" style="height: 1px;">
+				<ul class="nav navbar-nav navbar-right">
+					<li  {dede:field name=typeid runphp="yes"}(@me=="")? @me=" class='active'":@me="";{/dede:field}><a href="/">首页</a></li>
+					{dede:channel type='top'  currentstyle="
+					<li class='active'><a href='~typelink~' >~typename~</a></li>"}
+					<li><a href="[field:typeurl/]">[field:typename/]</a></li>
+					{/dede:channel}
+					
+				</ul>
+			</div>
+		</div>
+    </nav>
+    </header>

@@ -1,0 +1,13 @@
+<div class="swiper-slide">
+			{dede:type}
+			<h1>[field:typename/]</h1>
+			<h5>[field:description/]</h5>
+			{/dede:type}
+			<!-- 子栏目 -->
+			<ul class="list-group">
+				{dede:channel type='son'}
+				<li class="list-group-item"><a href='[field:typelink /]'>[field:typename/]</a></li>
+				{/dede:channel}
+			</ul>
+			
+		</div>

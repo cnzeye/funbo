@@ -1,0 +1,1 @@
+<li role="presentation"><a href=" [field:typelink  /] " style="background-color: #9a9a9a;color: white"><img src="{dede:global.cfg_templets_skin/}/images/all.png">全部作品</a></li>

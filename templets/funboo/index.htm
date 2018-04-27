@@ -1,0 +1,273 @@
+{dede:include filename="head.htm"/}
+
+
+
+
+<!-- 作品展示-->
+
+<!-- title -->
+
+<div class="container">
+	<div class="text-center">
+		<h2>案例展示</h2>
+		<small class="dx">work display</small>
+
+	</div>
+</div>
+<!-- title ND -->
+
+<!-- 子栏目输出电脑 -->
+<article>
+	<div class="container workds hidden-xs hidden-sm" style="
+	margin-bottom: 30px;
+	margin-top: 30px;
+	">
+
+	<a href="/plus/list.php?tid=2"><li{dede:field name=typeid runphp="yes"}(@me=="2")? @me=" class='active'":@me="";{/dede:field}>全部作品</li></a>
+	{dede:channel row='20'  type ='son' typeid ='2'}
+	<a href="[field:typeurl/]"><li>[field:typename/]</li></a>
+
+	{/dede:channel}
+</div>
+</article>
+<!-- 子栏目输出电脑END -->
+
+
+
+
+
+<div id="index_img" class="container">
+	{dede:arclist typeid='2' titlelen='24' imgheight='90' imgwidth='112' limit="0,20"}
+
+	<div   class="col-md-3 col-xs-6 col-sm-6 clo-lg-3 ">
+		<div class="indeximg">
+			
+			<a href='[field:arcurl/]'>[field:image/]
+				
+			</a>
+
+			<p><a href="[field:arcurl/]">[field:title/]</a></p>
+			<small style="color: #c0c0c0"><img src="/templets/funboo/images/type.png" style="width:11px;">[field:typelink/]<img src="/templets/funboo/images/view.png" style="width:16px;">[field:click/]hits</small>
+
+
+		</div>
+
+	</div>
+
+	{/dede:arclist}
+
+
+</div>
+<!-- 作品陈列区End -->
+<!-- 横向轮播 -->
+
+<section class="swiper-container hidden-sm hidden-xs">
+	<div id="sh" class="alert alert-danger" role="alert">左右滑动!</div>
+	<div class="swiper-wrapper">
+
+		{dede:channelArtlist typeid='20'}
+		<div class="swiper-slide">
+			<div class="swiper-slide-box">
+				{dede:type}
+				<h1>[field:typename/]</h1>
+				<h5>[field:description/]</h5>
+				{/dede:type}
+				<!-- 子栏目 -->
+				<ul class="list-group">
+					{dede:channel type='son'}
+					<li class="list-group-item"><a href='[field:typelink /]'>[field:typename/]</a></li>
+					{/dede:channel}
+				</ul>
+			</div>
+		</div>
+		{/dede:channelArtlist}
+
+
+	</div>
+
+	<!-- Add Pagination -->
+	<div class="swiper-pagination"></div>
+</section>
+<!-- 横向轮播End -->
+
+
+<!-- 服务 -->
+<div class="service container">
+	<!-- left -->
+	<div class="sleft">
+		<div class="stitle">
+			<h1>SERVICE/服务</h1>
+		</div>
+		<div class="slist">
+			<li class="moren"><h3>网站设计</h3></li>
+			<li><h3>电商服务</h3></li>
+			<li><h3>微信小程序</h3></li>
+			<li><h3>平面印刷</h3></li>
+		</div>
+		<div class="shide scontent">
+			<li class="s-item">
+				<p>基础企业网站</p>
+				<small>PPAISHEJI</small>
+
+			</li>
+			<li class="s-item">
+				<p>企业形象官网</p>
+				<small>PPAISHEJI</small>
+
+			</li>
+			<li class="s-item">
+				<p>营销型网站</p>
+				<small>PPAISHEJI</small>
+
+			</li>
+			<li class="s-item">
+				<p>高端定制型</p>
+				<small>PPAISHEJI</small>
+
+			</li>
+			<li class="s-item">
+				<p>商城网站开发</p>
+				<small>PPAISHEJI</small>
+
+			</li>
+	
+		</div>
+
+		<div class="shide">
+				<li class="s-item">
+				<p>电商品牌包装</p>
+				<small>店铺风格设计</small>
+
+			</li>
+				<li class="s-item">
+				<p>电商摄影</p>
+				<small>PPAISHEJI</small>
+
+			</li>
+				<li class="s-item">
+				<p>电商运营托管</p>
+				<small>PPAISHEJI</small>
+
+			</li>
+			
+			
+			
+		</div>
+
+		<div class="shide">
+		  	<li class="s-item">
+				<p>电商小程序</p>
+				<small>PPAISHEJI</small>
+
+			</li>
+				<li class="s-item">
+				<p>小程序商城</p>
+				<small>PPAISHEJI</small>
+
+			</li>
+				<li class="s-item">
+				<p>门店小程序</p>
+				<small>PPAISHEJI</small>
+
+			</li>
+				<li class="s-item">
+				<p>外卖小程序</p>
+				<small>PPAISHEJI</small>
+
+			</li>
+				<li class="s-item">
+				<p>餐饮小程序</p>
+				<small>PPAISHEJI</small>
+
+			</li>
+		</div>
+
+		<div class="shide">
+			<li>4444</li>
+			<li>4444</li>
+			<li>4444</li>
+			<li>4444</li>
+			<li>4444</li>
+			<li>4444</li>
+		</div>
+	</div>
+	<!-- right -->
+	<div class="sright"></div>
+</div>
+
+<!-- 服务 -->
+
+
+<div class="container">
+	<div class="text-center">
+		<h2>案例展示</h2>
+		<small class="dx">work display</small>
+
+	</div>
+</div>
+<!-- title ND -->
+
+<!-- 子栏目输出电脑 -->
+<article>
+	<div class="container workds hidden-xs hidden-sm" style="
+	margin-bottom: 30px;
+	margin-top: 30px;
+	">
+
+	<a href="/plus/list.php?tid=8"><li{dede:field name=typeid runphp="yes"}(@me=="8")? @me=" class='active'":@me="";{/dede:field}>全部作品</li></a>
+	{dede:channel row='20'  type ='son' typeid ='8'}
+	<a href="[field:typeurl/]"><li>[field:typename/]</li></a>
+
+	{/dede:channel}
+</div>
+</article>
+<!-- 子栏目输出电脑END -->
+
+<div class="container" id="news">
+	{dede:arclist typeid='8' titlelen='24' imgheight='100%' imgwidth='100%' limit="0,20"}
+	
+	<div class="col-md-4 col-lg-4 col-sm-6 col-xs-6">
+		<div class="newbox">
+			<div class="newbox-l">
+				<a href='[field:arcurl/]'>[field:image/]</a>
+			</div>
+			<div class="newbox-r">
+				<h2><a href="[field:arcurl/]">[field:title/]</a></h2>
+				<p>[field:description function="cn_substr(@me,250)"/]</p>
+				<p>[field:pubdate function='strftime("%m-%d",@me)'/]|<a href="[field:typeurl/]" target="_blank">[field:typename/]</a></p>
+			</div>
+		</div>
+	</div>
+	{/dede:arclist}
+
+
+</div>
+<!-- 新闻列表End -->
+
+<!-- 客户 -->
+
+<!-- title -->
+
+<div class="container">
+	<div class="text-center">
+		<h2>合作客户</h2>
+		<small class="dx">Cooperation </small>
+
+	</div>
+</div>
+<!-- title ND -->
+
+<article>
+	<div class="container workds hidden-xs hidden-sm gray">
+
+
+
+		{dede:arclist typeid='19' titlelen='24' limit="0,20"}<li>[field:image/]</li>{/dede:arclist}
+	</div>
+</article>
+<!-- 客户End -->
+
+{dede:include filename="footer.htm"/}
+</body>
+</html>
+

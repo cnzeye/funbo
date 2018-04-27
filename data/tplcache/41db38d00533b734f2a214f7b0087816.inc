@@ -1,0 +1,1 @@
+<a href='[field:xx/]' target="_blank">[field:shenghuo/]</a>

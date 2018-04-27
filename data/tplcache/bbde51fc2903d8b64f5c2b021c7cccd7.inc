@@ -1,0 +1,1 @@
+{dede:list  pagesize='5000' col='1' titlelen='150' orderby='pubdate' orderway='desc'  channel='1' }<li>[field:textlink/]</li>{/dede:list}
